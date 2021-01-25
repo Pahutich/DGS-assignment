@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script> var exports = {}; </script>
+<script src="strategy.js" ></script>
+<script src="factory.js" ></script>
+<script src="builder.js" ></script>
+<script src="Singleton.js" ></script>
+<script src="adapter.js" ></script>
+<script src="facade.js" ></script>
+<script src="observer.js" ></script>
+<script src="state.js" ></script>
+
+<body>
+
+    <div id="display" ></div>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+    <title>Snake - Game</title>
+
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            text-align: center;
+            background: #245425;
+            color: #fafafa;
+        }
+
+        .game {
+            margin-top: 25px;
+            display: inline-block;
+            border: 10px solid #000000;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px 0px rgba(5, 53, 6, 0.4);
+        }
+    
+        .gameIframe {
+            border: 0px;
+            display: block;
+            margin: auto;
+        }
+
+        .logo {
+            font-family: 'Londrina Solid', cursive;
+            font-size: 50px;
+            margin-top: 25px;
+            text-shadow: 0px 0px 10px rgba(5, 53, 6, 0.56);
+        }
+
+        .description {
+            font-family: 'Londrina Solid', cursive;
+            font-size: 25px;
+            text-shadow: 0px 0px 10px rgba(5, 53, 6, 0.56);
+        }
+
+        .link {
+            font-family: 'VT323', monospace;
+            font-size: 20px;
+            margin-top: 10px;
+            display: inline-block;
+            border: 1px solid #378239;
+            background: #306b32;
+            border-radius: 2px;
+            padding: 5px 10px;
+        }
+
+        .a,
+        .a:visited {
+            color: #fafafa;
+            transition: opacity 250ms;
+            text-decoration: none;
+        }
+
+        .a:hover {
+            opacity: 0.8;
+        }
+
+        .footer {
+            font-family: 'Arial';
+            font-size: 13px;
+            margin-top: 25px;
+        }
+
+        .footer .a {
+            color: #6ce06f;
+        }
+
+        @media screen and (max-width: 450px) {
+            .logo {
+                font-size: 30px;
+                margin-top: 15px;
+            }
+
+            .description {
+                font-size: 20px;
+            }
+
+            .link {
+                font-size: 15px;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var gameIframe = document.getElementById('gameIframe');
+
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            
+            if (h < 800) {
+                gameIframe.width = 500;
+                gameIframe.height = 300;
+            }
+
+            if (w <= 770) {
+                gameIframe.width = 600;
+            }
+
+            if (w <= 600) {
+                gameIframe.width = 275;
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="logo">
+        Snake game
+    </div>
+    <div class="clear"></div>
+    <div class="clear"></div>
+    <div class="game">
+        <iframe src="game.html" id="gameIframe" class="gameIframe" width="800" height="600"></iframe>
+    </div>
+</body>
+</html>
